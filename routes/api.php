@@ -21,13 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::middleware('auth:sanctum')->group(function () {
-//     Route::get('/get', [StudentInfoController::class, 'index']);
-//     Route::post('/store', [StudentInfoController::class, 'store']);
-//     Route::get('/{$id}', [StudentInfoController::class, 'show']);
-//     Route::delete('/{id}', [StudentInfoController::class, 'destroy']);
-//     Route::put('/{id}', [StudentInfoController::class, 'update']);
-// });
+
 
 Route::controller(SystemController::class)->group(function () {
     Route::get('/get', 'index');
